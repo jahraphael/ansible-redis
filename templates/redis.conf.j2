@@ -101,6 +101,14 @@ client-output-buffer-limit pubsub {{ redis_client_output_buffer_limit_pubsub }}
 hz {{ redis_hz }}
 aof-rewrite-incremental-fsync yes
 
+# Cluster
+cluster-enabled {{ redis_cluster_enabled }}
+cluster-config-file {{ redis_cluster_config_file }}
+cluster-node-timeout {{ redis_cluster_node_timeout }}
+cluster-slave-validity-factor {{ redis_cluster_slave_validity_factory }}
+cluster-migration-barrier {{ redis_cluster_migration_barrier }}
+cluster-require-full-coverage {{ redis_cluster_require_full_coverage }}
+
 {% if redis_config_additional|length -%}
 # Additional
 {{ redis_config_additional -}}

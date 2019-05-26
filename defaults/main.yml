@@ -141,3 +141,11 @@ redis_sentinel_monitors:
     notification_script: false
     client_reconfig_script: false
     rename_commands: []
+
+# Cluster settings
+redis_cluster_enabled: "no"
+redis_cluster_config_file: nodes.conf
+redis_cluster_node_timeout: 5000
+redis_cluster_slave_validity_factory: 0
+redis_cluster_migration_barrier: 0
+redis_cluster_require_full_coverage: "yes"
